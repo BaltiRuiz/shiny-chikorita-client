@@ -1,0 +1,41 @@
+{
+    "name": "shiny-chikorita-client",
+    "version": "1.0.0",
+    "private": true,
+    "description": "Frontend side of the Shiny-Chikorita application",
+    "author": "Balti Ruiz",
+    "license": "ISC",
+    "proxy": "http://localhost:3001",
+    "scripts": {
+        "start": "cross-env PUBLIC_URL=/ react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "dependencies": {
+        "@babel/eslint-parser": "^7.17.0",
+        "@babel/preset-react": "^7.16.7",
+        "axios": "^0.26.1",
+        "cross-env": "^7.0.3",
+        "eslint-plugin-react-hooks": "^4.4.0",
+        "jwt-decode": "^3.1.2",
+        "react": "^18.0.0",
+        "react-dom": "^18.0.0",
+        "react-redux": "^7.2.7",
+        "react-router-dom": "^6.2.2",
+        "react-scripts": "^5.0.0",
+        "redux": "^4.1.2",
+        "redux-thunk": "^2.4.1"
+    }
+}
