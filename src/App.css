@@ -1,0 +1,281 @@
+.grid-container {
+    display: grid;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: 100%;
+    grid-template-rows: 5% 90% 5%;
+    grid-template-areas: 'nav' 'main' 'footer';
+}
+
+.grid-container div {
+    text-align: center;
+    padding: 5px;
+    border: 1px solid black;
+}
+
+.grid-centered-element {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+.grid-nav {
+    display: grid;
+    grid-area: nav;
+    grid-template-columns: 15% 15% 15% 15% 15% 15% 10%;
+    grid-template-rows: 100%;
+    grid-template-areas: 'nav-pokemon nav-types nav-moves nav-ability nav-items nav-locations nav-profile';
+}
+
+.grid-nav-pokemon {
+    grid-area: nav-pokemon;
+}
+
+.grid-nav-types {
+    grid-area: nav-types;
+}
+
+.grid-nav-moves {
+    grid-area: nav-moves;
+}
+
+.grid-nav-abilities {
+    grid-area: nav-abilities;
+}
+
+.grid-nav-items {
+    grid-area: nav-items;
+}
+
+.grid-nav-locations {
+    grid-area: nav-locations;
+}
+
+.grid-nav-profile {
+    grid-area: nav-profile;
+}
+
+.grid-main {
+    display: grid;
+    grid-area: main;
+    grid-template-columns: 100%;
+    grid-template-rows: 10% 90%;
+    grid-template-areas: 'search' 'content';
+}
+
+.grid-main-search {
+    display: grid;
+    grid-area: search;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+    grid-template-areas: 'id button';
+}
+
+.grid-main-search-id {
+    grid-area: id;
+}
+
+.grid-main-search-button {
+    grid-area: button;
+}
+
+.grid-main-content {
+    display: grid;
+    grid-area: content;
+    grid-template-columns: 35% 65%;
+    grid-template-rows: 100%;
+    grid-template-areas: 'photo info';
+}
+
+.grid-main-content-photo {
+    display: grid;
+    grid-area: photo;
+    grid-template-columns: 100%;
+    grid-template-rows: 10% 90%;
+    grid-template-areas: 'photo-bar' 'photo-sprites';
+}
+
+.grid-main-content-photo-bar {
+    display: grid;
+    grid-area: photo-bar;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 100%;
+    grid-template-areas: 'photo-bar-generations photo-bar-genres';
+}
+
+.grid-main-content-photo-bar-generations {
+    grid-area: photo-bar-generations;
+}
+
+.grid-main-content-photo-bar-genres {
+    grid-area: photo-bar-genres;
+}
+
+.grid-main-content-photo-sprites {
+    display: grid;
+    grid-area: photo-sprites;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: 'sprites-normal-back sprites-normal-front' 'sprites-shiny-back sprites-shiny-front';
+}
+
+.grid-main-content-photo-normal-front {
+    grid-area: sprites-normal-front;
+}
+
+.grid-main-content-photo-normal-back {
+    grid-area: sprites-normal-back;
+}
+
+.grid-main-content-photo-shiny-front {
+    grid-area: sprites-shiny-front;
+}
+
+.grid-main-content-photo-shiny-back {
+    grid-area: sprites-shiny-back;
+}
+
+.grid-main-content-info {
+    display: grid;
+    grid-area: info;
+    grid-template-columns: 100%;
+    grid-template-rows: 15% 15% 40% 15% 15%;
+    grid-template-areas: 'basic' 'metadata' 'abilities' 'description' 'stats';
+}
+
+.grid-main-content-info-basic {
+    display: grid;
+    grid-area: basic;
+    grid-template-columns: 10% 10% 30% 20% 20% 10%;
+    grid-template-rows: 100%;
+    grid-template-areas: 'basic-previous basic-id basic-name basic-first-type basic-second-type basic-next';
+}
+
+.grid-main-content-info-basic-previous {
+    grid-area: basic-previous;
+}
+
+.grid-main-content-info-basic-id {
+    grid-area: basic-id;
+}
+
+.grid-main-content-info-basic-name {
+    grid-area: basic-name;
+}
+
+.grid-main-content-info-basic-first-type {
+    grid-area: basic-first-type;
+}
+
+.grid-main-content-info-basic-second-type {
+    grid-area: basic-second-type;
+}
+
+.grid-main-content-info-basic-next {
+    grid-area: basic-next;
+}
+
+.grid-main-content-info-description {
+    grid-area: description;
+}
+
+.grid-main-content-info-metadata {
+    display: grid;
+    grid-area: metadata;
+    grid-template-columns: 25% 25% 50%;
+    grid-template-rows: 100%;
+    grid-template-areas: 'metadata-height metadata-weight metadata-species';
+}
+
+.grid-main-content-info-metadata-height {
+    grid-area: metadata-height;
+}
+
+.grid-main-content-info-metadata-weight {
+    grid-area: metadata-weight;
+}
+
+.grid-main-content-info-abilities {
+    display: grid;
+    grid-area: abilities;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 100%;
+    grid-template-areas: 'abilities-title abilities-details';
+}
+
+.grid-main-content-info-abilities-title {
+    grid-area: abilities-title;
+}
+
+.grid-main-content-info-abilities-details {
+    display: grid;
+    grid-area: abilities-details;
+    grid-template-columns: 25% 75%;
+    grid-template-rows: 33.33% 33.33% 33.33%;
+    grid-template-areas: 'abilities-details-first-name abilities-details-first-description' 'abilities-details-second-name abilities-details-second-description' 'abilities-details-third-name abilities-details-third-description';
+}
+
+.grid-main-content-info-abilities-details-first-name {
+    grid-area: abilities-details-first-name;
+}
+
+.grid-main-content-info-abilities-details-first-description {
+    grid-area: abilities-details-first-description;
+}
+
+.grid-main-content-info-abilities-details-second-name {
+    grid-area: abilities-details-second-name;
+}
+
+.grid-main-content-info-abilities-details-second-description {
+    grid-area: abilities-details-second-description;
+}
+
+.grid-main-content-info-abilities-details-third-name {
+    grid-area: abilities-details-third-name;
+}
+
+.grid-main-content-info-abilities-details-third-description {
+    grid-area: abilities-details-third-description;
+}
+
+.grid-main-content-info-metadata-species {
+    grid-area: metadata-species;
+}
+
+.grid-main-content-info-stats {
+    display: grid;
+    grid-area: stats;
+    grid-template-columns: 16.66% 16.66% 16.66% 16.66% 16.66% 16.66%;
+    grid-template-rows: 100%;
+    grid-template-areas: 'stats-hp stats-attack stats-defense stats-special-attack stats-special-defense stats-speed';
+}
+
+.grid-main-content-info-stats-hp {
+    grid-area: stats-hp;
+}
+
+.grid-main-content-info-stats-attack {
+    grid-area: stats-attack;
+}
+
+.grid-main-content-info-stats-defense {
+    grid-area: stats-defense;
+}
+
+.grid-main-content-info-stats-special-attack {
+    grid-area: stats-special-attack;
+}
+
+.grid-main-content-info-stats-special-defense {
+    grid-area: stats-special-defense;
+}
+
+.grid-main-content-info-stats-speed {
+    grid-area: stats-speed;
+}
+
+.grid-footer {
+    grid-area: footer;
+}
