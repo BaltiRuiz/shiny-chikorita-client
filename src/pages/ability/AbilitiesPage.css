@@ -1,0 +1,100 @@
+.grid-main-content-abilities {
+    display: grid;
+    grid-area: content;
+    grid-template-columns: 100%;
+    grid-template-rows: 10% 90%;
+    grid-template-areas: 'abilities-title' 'abilities-info';
+}
+
+.grid-main-content-abilities-title {
+    grid-area: abilities-title;
+}
+
+.grid-main-content-abilities-info {
+    display: grid;
+    grid-area: abilities-info;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 100%;
+    grid-template-areas: 'abilities-info-metadata abilities-info-pokemon';
+}
+
+.grid-main-content-abilities-info-metadata {
+    display: grid;
+    grid-area: abilities-info-metadata;
+    grid-template-columns: 100%;
+    grid-template-rows: 10% 20% 70%;
+    grid-template-areas: 'abilities-info-metadata-generation' 'abilities-info-metadata-short-description' 'abilities-info-metadata-description';
+}
+
+.grid-main-content-abilities-info-metadata-generation {
+    grid-area: abilities-info-metadata-generation;
+}
+
+.grid-main-content-abilities-info-metadata-short-description {
+    display: grid;
+    grid-area: abilities-info-metadata-short-description;
+    grid-template-columns: 35% 65%;
+    grid-template-rows: 100%;
+    grid-template-areas: 'abilities-info-metadata-short-description-title abilities-info-metadata-short-description-content';
+}
+
+.grid-main-content-abilities-info-metadata-short-description-title {
+    grid-area: abilities-info-metadata-short-description-title;
+}
+
+.grid-main-content-abilities-info-metadata-short-description-content {
+    grid-area: abilities-info-metadata-short-description-content;
+}
+
+.grid-main-content-abilities-info-metadata-description {
+    display: grid;
+    grid-area: abilities-info-metadata-description;
+    grid-template-columns: 35% 65%;
+    grid-template-rows: 100%;
+    grid-template-areas: 'abilities-info-metadata-description-title abilities-info-metadata-description-content';
+}
+
+.grid-main-content-abilities-info-metadata-description-title {
+    grid-area: abilities-info-metadata-description-title;
+}
+
+.grid-main-content-abilities-info-metadata-description-content {
+    grid-area: abilities-info-metadata-description-content;
+}
+
+.grid-main-content-abilities-info-pokemon {
+    display: grid;
+    grid-area: abilities-info-pokemon;
+    grid-template-columns: 35% 65%;
+    grid-auto-rows: 33.33% 33.33% 33.33%;
+    grid-template-areas: 'abilities-info-pokemon-sprite abilities-info-pokemon-content' 'abilities-info-pokemon-sprite abilities-info-pokemon-content' 'abilities-info-pokemon-sprite abilities-info-pokemon-content';
+    overflow-y: auto;
+}
+
+.grid-main-content-abilities-info-pokemon-content {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 33.33% 33.33% 33.33%;
+    grid-template-areas: 'abilities-info-pokemon-content-title' 'abilities-info-pokemon-content-types' 'abilities-info-pokemon-content-abilities';
+}
+
+.grid-main-content-abilities-info-pokemon-content-title {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 100%;
+    grid-template-areas: 'abilities-info-pokemon-content-title-id abilities-info-pokemon-content-title-name';
+}
+
+.grid-main-content-abilities-info-pokemon-content-types {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+    grid-template-areas: 'abilities-info-pokemon-content-types-first abilities-info-pokemon-content-types-second';
+}
+
+.grid-main-content-abilities-info-pokemon-content-abilities {
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    grid-template-rows: 100%;
+    grid-template-areas: 'abilities-info-pokemon-content-abilities-first abilities-info-pokemon-content-abilities-second abilities-info-pokemon-content-abilities-third';
+}

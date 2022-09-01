@@ -1,0 +1,195 @@
+.grid-main-content-pokemon {
+    display: grid;
+    grid-area: content;
+    grid-template-columns: 35% 65%;
+    grid-template-rows: 100%;
+    grid-template-areas: 'pokemon-photo pokemon-info';
+}
+
+.grid-main-content-pokemon-photo {
+    display: grid;
+    grid-area: pokemon-photo;
+    grid-template-columns: 100%;
+    grid-template-rows: 10% 90%;
+    grid-template-areas: 'pokemon-photo-bar' 'pokemon-photo-sprites';
+}
+
+.grid-main-content-pokemon-photo-bar {
+    display: grid;
+    grid-area: pokemon-photo-bar;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 100%;
+    grid-template-areas: 'pokemon-photo-bar-generations pokemon-photo-bar-genres';
+}
+
+.grid-main-content-pokemon-photo-bar-generations {
+    grid-area: pokemon-photo-bar-generations;
+}
+
+.grid-main-content-pokemon-photo-bar-genres {
+    grid-area: pokemon-photo-bar-genres;
+}
+
+.grid-main-content-pokemon-photo-sprites {
+    display: grid;
+    grid-area: pokemon-photo-sprites;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: 'pokemon-sprites-normal-back pokemon-sprites-normal-front' 'pokemon-sprites-shiny-back pokemon-sprites-shiny-front';
+}
+
+.grid-main-content-pokemon-photo-normal-front {
+    grid-area: pokemon-sprites-normal-front;
+}
+
+.grid-main-content-pokemon-photo-normal-back {
+    grid-area: pokemon-sprites-normal-back;
+}
+
+.grid-main-content-pokemon-photo-shiny-front {
+    grid-area: pokemon-sprites-shiny-front;
+}
+
+.grid-main-content-pokemon-photo-shiny-back {
+    grid-area: pokemon-sprites-shiny-back;
+}
+
+.grid-main-content-pokemon-info {
+    display: grid;
+    grid-area: pokemon-info;
+    grid-template-columns: 100%;
+    grid-template-rows: 15% 15% 40% 15% 15%;
+    grid-template-areas: 'pokemon-basic' 'pokemon-metadata' 'pokemon-abilities' 'pokemon-description' 'pokemon-stats';
+}
+
+.grid-main-content-pokemon-info-basic {
+    display: grid;
+    grid-area: pokemon-basic;
+    grid-template-columns: 10% 10% 30% 20% 20% 10%;
+    grid-template-rows: 100%;
+    grid-template-areas: 'pokemon-basic-previous pokemon-basic-id pokemon-basic-name pokemon-basic-first-type pokemon-basic-second-type pokemon-basic-next';
+}
+
+.grid-main-content-pokemon-info-basic-previous {
+    grid-area: pokemon-basic-previous;
+}
+
+.grid-main-content-pokemon-info-basic-id {
+    grid-area: pokemon-basic-id;
+}
+
+.grid-main-content-pokemon-info-basic-name {
+    grid-area: pokemon-basic-name;
+}
+
+.grid-main-content-pokemon-info-basic-first-type {
+    grid-area: pokemon-basic-first-type;
+}
+
+.grid-main-content-pokemon-info-basic-second-type {
+    grid-area: pokemon-basic-second-type;
+}
+
+.grid-main-content-pokemon-info-basic-next {
+    grid-area: pokemon-basic-next;
+}
+
+.grid-main-content-pokemon-info-description {
+    grid-area: pokemon-description;
+}
+
+.grid-main-content-pokemon-info-metadata {
+    display: grid;
+    grid-area: pokemon-metadata;
+    grid-template-columns: 25% 25% 50%;
+    grid-template-rows: 100%;
+    grid-template-areas: 'pokemon-metadata-height pokemon-metadata-weight pokemon-metadata-species';
+}
+
+.grid-main-content-pokemon-info-metadata-height {
+    grid-area: pokemon-metadata-height;
+}
+
+.grid-main-content-pokemon-info-metadata-weight {
+    grid-area: pokemon-metadata-weight;
+}
+
+.grid-main-content-pokemon-info-abilities {
+    display: grid;
+    grid-area: pokemon-abilities;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 100%;
+    grid-template-areas: 'pokemon-abilities-title pokemon-abilities-details';
+}
+
+.grid-main-content-pokemon-info-abilities-title {
+    grid-area: pokemon-abilities-title;
+}
+
+.grid-main-content-pokemon-info-abilities-details {
+    display: grid;
+    grid-area: pokemon-abilities-details;
+    grid-template-columns: 25% 75%;
+    grid-template-rows: 33.33% 33.33% 33.33%;
+    grid-template-areas: 'pokemon-abilities-details-first-name pokemon-abilities-details-first-description' 'pokemon-abilities-details-second-name pokemon-abilities-details-second-description' 'pokemon-abilities-details-third-name pokemon-abilities-details-third-description';
+}
+
+.grid-main-content-pokemon-info-abilities-details-first-name {
+    grid-area: pokemon-abilities-details-first-name;
+}
+
+.grid-main-content-pokemon-info-abilities-details-first-description {
+    grid-area: pokemon-abilities-details-first-description;
+}
+
+.grid-main-content-pokemon-info-abilities-details-second-name {
+    grid-area: pokemon-abilities-details-second-name;
+}
+
+.grid-main-content-pokemon-info-abilities-details-second-description {
+    grid-area: pokemon-abilities-details-second-description;
+}
+
+.grid-main-content-pokemon-info-abilities-details-third-name {
+    grid-area: pokemon-abilities-details-third-name;
+}
+
+.grid-main-content-pokemon-info-abilities-details-third-description {
+    grid-area: pokemon-abilities-details-third-description;
+}
+
+.grid-main-content-pokemon-info-metadata-species {
+    grid-area: pokemon-metadata-species;
+}
+
+.grid-main-content-pokemon-info-stats {
+    display: grid;
+    grid-area: pokemon-stats;
+    grid-template-columns: 16.66% 16.66% 16.66% 16.66% 16.66% 16.66%;
+    grid-template-rows: 100%;
+    grid-template-areas: 'pokemon-stats-hp pokemon-stats-attack pokemon-stats-defense pokemon-stats-special-attack pokemon-stats-special-defense pokemon-stats-speed';
+}
+
+.grid-main-content-pokemon-info-stats-hp {
+    grid-area: pokemon-stats-hp;
+}
+
+.grid-main-content-pokemon-info-stats-attack {
+    grid-area: pokemon-stats-attack;
+}
+
+.grid-main-content-pokemon-info-stats-defense {
+    grid-area: pokemon-stats-defense;
+}
+
+.grid-main-content-pokemon-info-stats-special-attack {
+    grid-area: pokemon-stats-special-attack;
+}
+
+.grid-main-content-pokemon-info-stats-special-defense {
+    grid-area: pokemon-stats-special-defense;
+}
+
+.grid-main-content-pokemon-info-stats-speed {
+    grid-area: pokemon-stats-speed;
+}

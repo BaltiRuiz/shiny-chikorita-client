@@ -1,4 +1,4 @@
-import { PokemonType } from "../enums/pokemon.enums";
+import { PokemonGeneration, PokemonGenerationExtended, PokemonType } from "../enums/pokemon.enums";
 
 const typeColorMap = new Map<PokemonType, string>([
     [PokemonType.Normal, "grey"],
@@ -21,6 +21,21 @@ const typeColorMap = new Map<PokemonType, string>([
     [PokemonType.Fairy, "violet"],
 ]);
 
+const generationMap = new Map<string, string>([
+    [PokemonGeneration.GenerationI, PokemonGenerationExtended.GenerationI],
+    [PokemonGeneration.GenerationII, PokemonGenerationExtended.GenerationII],
+    [PokemonGeneration.GenerationIII, PokemonGenerationExtended.GenerationIII],
+    [PokemonGeneration.GenerationIV, PokemonGenerationExtended.GenerationIV],
+    [PokemonGeneration.GenerationV, PokemonGenerationExtended.GenerationV],
+    [PokemonGeneration.GenerationVI, PokemonGenerationExtended.GenerationVI],
+    [PokemonGeneration.GenerationVII, PokemonGenerationExtended.GenerationVII],
+    [PokemonGeneration.GenerationVIII, PokemonGenerationExtended.GenerationVIII],
+]);
+
 export const mapPokemonTypeToColor = (type: PokemonType) => {
     return typeColorMap.get(type);
+}
+
+export const mapGenerationToExtendedVersion = (generation: PokemonGeneration) => {
+    return generationMap.get(generation);
 }

@@ -1,12 +1,12 @@
 import { ThunkAction, ThunkDispatch } from "redux-thunk";
 
 import { IApplicationStoreState } from "./application/store.application.interfaces";
-import { IPokemonStoreState } from "./pokemon/store.pokemon.interfaces";
+import { IResourceStoreState } from "./resource/store.resource.interfaces";
 import { IUserStoreState } from "./user/store.user.interfaces";
 
 export interface IStoreState {
     application: IApplicationStoreState,
-    pokemon: IPokemonStoreState,
+    resource: IResourceStoreState,
     user: IUserStoreState,
 }
 
