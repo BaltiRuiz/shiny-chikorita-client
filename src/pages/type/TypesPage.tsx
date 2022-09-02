@@ -59,7 +59,11 @@ function TypesContentInfoMoves(props: any) {
                 <div className="grid-centered-element"><b>ACCURACY</b></div>
                 {moves.map((move: any) =>
                     <React.Fragment key={`${type}-related-move-${move.id}`}>
-                        <div className="grid-centered-element"><b>{move.name.toUpperCase()}</b></div>
+                        <div className="grid-centered-element">
+                            <Link to={`/move/${move.name}`} style={{ color: "black" }}>
+                                <b>{move.name.toUpperCase()}</b>
+                            </Link>
+                        </div>
                         <div className="grid-centered-element">{move.category}</div>
                         <div className="grid-centered-element">{move.power ? move.power : "-"}</div>
                         <div className="grid-centered-element">{move.pp}</div>

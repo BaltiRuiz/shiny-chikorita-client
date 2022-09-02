@@ -19,7 +19,7 @@ import { Navigator } from "./components/Navigator";
 import { ResourceProvider } from "./pages/resource/ResourceProvider";
 import { PokemonPage } from "./pages/pokemon/PokemonPage";
 import { TypesPage } from "./pages/type/TypesPage";
-import { MovesPage } from "./pages/MovesPage";
+import { MovesPage } from "./pages/move/MovesPage";
 import { AbilitiesPage } from "./pages/ability/AbilitiesPage";
 import { ItemsPage } from "./pages/ItemsPage";
 import { LocationsPage } from "./pages/LocationsPage";

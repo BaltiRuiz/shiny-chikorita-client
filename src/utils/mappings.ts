@@ -1,4 +1,10 @@
-import { PokemonGeneration, PokemonGenerationExtended, PokemonType } from "../enums/pokemon.enums";
+import {
+    PokemonGeneration,
+    PokemonGenerationExtended,
+    PokemonTarget,
+    PokemonTargetExtended,
+    PokemonType,
+} from "../enums/pokemon.enums";
 
 const typeColorMap = new Map<PokemonType, string>([
     [PokemonType.Normal, "grey"],
@@ -32,10 +38,32 @@ const generationMap = new Map<string, string>([
     [PokemonGeneration.GenerationVIII, PokemonGenerationExtended.GenerationVIII],
 ]);
 
+const targetMap = new Map<string, string>([
+    [PokemonTarget.AllAllies, PokemonTargetExtended.AllAllies],
+    [PokemonTarget.AllOpponents, PokemonTargetExtended.AllOpponents],
+    [PokemonTarget.AllOtherPokemon, PokemonTargetExtended.AllOtherPokemon],
+    [PokemonTarget.AllPokemon, PokemonTargetExtended.AllPokemon],
+    [PokemonTarget.Ally, PokemonTargetExtended.Ally],
+    [PokemonTarget.EntireField, PokemonTargetExtended.EntireField],
+    [PokemonTarget.OpponentsField, PokemonTargetExtended.OpponentsField],
+    [PokemonTarget.RandomOpponent, PokemonTargetExtended.RandomOpponent],
+    [PokemonTarget.SelectedPokemon, PokemonTargetExtended.SelectedPokemon],
+    [PokemonTarget.SelectedPokemonMeFirst, PokemonTargetExtended.SelectedPokemonMeFirst],
+    [PokemonTarget.SpecificMove, PokemonTargetExtended.SpecificMove],
+    [PokemonTarget.User, PokemonTargetExtended.User],
+    [PokemonTarget.UserAndAllies, PokemonTargetExtended.UserAndAllies],
+    [PokemonTarget.UserOrAlly, PokemonTargetExtended.UserOrAlly],
+    [PokemonTarget.UsersField, PokemonTargetExtended.UsersField],
+]);
+
 export const mapPokemonTypeToColor = (type: PokemonType) => {
     return typeColorMap.get(type);
 }
 
 export const mapGenerationToExtendedVersion = (generation: PokemonGeneration) => {
     return generationMap.get(generation);
+}
+
+export const mapTargetToExtendedVersion = (target: PokemonTarget) => {
+    return targetMap.get(target);
 }

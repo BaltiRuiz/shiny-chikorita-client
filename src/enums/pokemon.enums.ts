@@ -40,3 +40,39 @@ export enum PokemonGenerationExtended {
     GenerationVII = "Seventh Generation",
     GenerationVIII = "Eighth Generation",
 }
+
+export enum PokemonTarget {
+    SpecificMove = "specific-move",
+    SelectedPokemonMeFirst = "selected-pokemon-me-first",
+    Ally = "ally",
+    UsersField = "users-field",
+    UserOrAlly = "user-or-ally",
+    OpponentsField = "opponents-field",
+    User = "user",
+    RandomOpponent = "random-opponent",
+    AllOtherPokemon = "all-other-pokemon",
+    SelectedPokemon = "selected-pokemon",
+    AllOpponents = "all-opponents",
+    EntireField = "entire-field",
+    UserAndAllies = "user-and-allies",
+    AllPokemon = "all-pokemon",
+    AllAllies = "all-allies",
+}
+
+export enum PokemonTargetExtended {
+    SpecificMove = "Specific Move",
+    SelectedPokemonMeFirst = "Specific Move (Me First)",
+    Ally = "Ally",
+    UsersField = "Users Field",
+    UserOrAlly = "User or Ally",
+    OpponentsField = "Opponents Field",
+    User = "User",
+    RandomOpponent = "Random Opponent",
+    AllOtherPokemon = "All Other Pokemon",
+    SelectedPokemon = "Selected Pokemon",
+    AllOpponents = "All Opponents",
+    EntireField = "Entire Field",
+    UserAndAllies = "User and Allies",
+    AllPokemon = "All Pokemon",
+    AllAllies = "All Allies",
+}
