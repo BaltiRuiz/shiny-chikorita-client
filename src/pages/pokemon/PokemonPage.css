@@ -65,21 +65,9 @@
 .grid-main-content-pokemon-info-basic {
     display: grid;
     grid-area: pokemon-basic;
-    grid-template-columns: 10% 10% 30% 20% 20% 10%;
+    grid-template-columns: 50% 50%;
     grid-template-rows: 100%;
-    grid-template-areas: 'pokemon-basic-previous pokemon-basic-id pokemon-basic-name pokemon-basic-first-type pokemon-basic-second-type pokemon-basic-next';
-}
-
-.grid-main-content-pokemon-info-basic-previous {
-    grid-area: pokemon-basic-previous;
-}
-
-.grid-main-content-pokemon-info-basic-id {
-    grid-area: pokemon-basic-id;
-}
-
-.grid-main-content-pokemon-info-basic-name {
-    grid-area: pokemon-basic-name;
+    grid-template-areas: 'pokemon-basic-first-type pokemon-basic-second-type';
 }
 
 .grid-main-content-pokemon-info-basic-first-type {
@@ -90,10 +78,6 @@
     grid-area: pokemon-basic-second-type;
 }
 
-.grid-main-content-pokemon-info-basic-next {
-    grid-area: pokemon-basic-next;
-}
-
 .grid-main-content-pokemon-info-description {
     grid-area: pokemon-description;
 }
@@ -101,9 +85,9 @@
 .grid-main-content-pokemon-info-metadata {
     display: grid;
     grid-area: pokemon-metadata;
-    grid-template-columns: 25% 25% 50%;
+    grid-template-columns: 15% 15% 30% 40%;
     grid-template-rows: 100%;
-    grid-template-areas: 'pokemon-metadata-height pokemon-metadata-weight pokemon-metadata-species';
+    grid-template-areas: 'pokemon-metadata-height pokemon-metadata-weight pokemon-metadata-species pokemon-metadata-egg-groups';
 }
 
 .grid-main-content-pokemon-info-metadata-height {
@@ -112,6 +96,18 @@
 
 .grid-main-content-pokemon-info-metadata-weight {
     grid-area: pokemon-metadata-weight;
+}
+
+.grid-main-content-pokemon-info-metadata-species {
+    grid-area: pokemon-metadata-species;
+}
+
+.grid-main-content-pokemon-info-metadata-egg-groups {
+    display: grid;
+    grid-area: pokemon-metadata-egg-groups;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    grid-template-rows: 100%;
+    grid-template-areas: 'pokemon-metadata-egg-groups-title pokemon-metadata-egg-groups-first pokemon-metadata-egg-groups-second';
 }
 
 .grid-main-content-pokemon-info-abilities {
@@ -156,10 +152,6 @@
 
 .grid-main-content-pokemon-info-abilities-details-third-description {
     grid-area: pokemon-abilities-details-third-description;
-}
-
-.grid-main-content-pokemon-info-metadata-species {
-    grid-area: pokemon-metadata-species;
 }
 
 .grid-main-content-pokemon-info-stats {

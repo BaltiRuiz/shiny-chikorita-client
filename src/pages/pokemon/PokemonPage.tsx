@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import "./PokemonPage.css";
 
@@ -132,52 +132,49 @@ function PokemonContentInfoBasicType(props: any) {
 }
 
 function PokemonContentInfoBasic(props: any) {
-    const { id, name, firstType, secondType } = props;
-
-    const navigate = useNavigate();
-
-    const handlePreviousNextButtonClick = (newID: number) => {
-        navigate(`/pokemon/${newID}`);
-    }
-
-    const isAPIFetching = useAPIStateFetching();
+    const { firstType, secondType } = props;
 
     return (
         <div className="grid-main-content-pokemon-info-basic">
-            <div className="grid-centered-element grid-main-content-pokemon-info-basic-previous">
-                <button
-                    type="button"
-                    disabled={isAPIFetching}
-                    onClick={() => handlePreviousNextButtonClick(+id - 1)}
-                >
-                    Previous
-                </button>
-            </div>
-            <div className="grid-centered-element grid-main-content-pokemon-info-basic-id"><h1>{id}</h1></div>
-            <div className="grid-centered-element grid-main-content-pokemon-info-basic-name"><h1>{name.toUpperCase()}</h1></div>
             <PokemonContentInfoBasicType className="grid-centered-element grid-main-content-pokemon-info-basic-first-type" type={firstType} />
             <PokemonContentInfoBasicType className="grid-centered-element grid-main-content-pokemon-info-basic-second-type" type={secondType} />
-            <div className="grid-centered-element grid-main-content-pokemon-info-basic-next">
-                <button
-                    type="button"
-                    disabled={isAPIFetching}
-                    onClick={() => handlePreviousNextButtonClick(+id + 1)}
-                >
-                    Next
-                </button>
-            </div>
         </div>
     );
 }
 
+function PokemonContentInfoMetadataEggGroup(props: any) {
+    const { className, eggGroup } = props;
+
+    if (eggGroup) {
+        return (
+            <div className={className}>
+                <b>{eggGroup.toUpperCase()}</b>
+            </div>
+        );
+    } else {
+        return null;
+    }
+}
+
 function PokemonContentInfoMetadata(props: any) {
-    const { height, weight, species } = props;
+    const { height, weight, species, eggGroups } = props;
 
     return (
         <div className="grid-main-content-pokemon-info-metadata">
             <div className="grid-centered-element grid-main-content-pokemon-info-metadata-height"><h3>{`Height: ${height} m`}</h3></div>
             <div className="grid-centered-element grid-main-content-pokemon-info-metadata-weight"><h3>{`Weight: ${weight} kg`}</h3></div>
             <div className="grid-centered-element grid-main-content-pokemon-info-metadata-species"><h3>{`Species: ${species}`}</h3></div>
+            <div className="grid-main-content-pokemon-info-metadata-egg-groups">
+                <div className="grid-centered-element grid-main-content-pokemon-info-metadata-egg-groups-title"><h3>Egg Groups:</h3></div>
+                <PokemonContentInfoMetadataEggGroup
+                    className="grid-centered-element grid-main-content-pokemon-info-metadata-egg-groups-first"
+                    eggGroup={eggGroups.firstEggGroup}
+                />
+                <PokemonContentInfoMetadataEggGroup
+                    className="grid-centered-element grid-main-content-pokemon-info-metadata-egg-groups-second"
+                    eggGroup={eggGroups.secondEggGroup}
+                />
+            </div>
         </div>
     );
 }
@@ -244,7 +241,7 @@ function PokemonContentInfoStats(props: any) {
 }
 
 function PokemonContentInfo(props: any) {
-    const { id, name, types, height, weight, abilities, stats, species, description } = props.info;
+    const { id, name, types, height, weight, eggGroups, abilities, stats, species, description } = props.info;
 
     const { firstType, secondType } = types;
     const { firstAbility, secondAbility, thirdAbility } = abilities;
@@ -253,7 +250,7 @@ function PokemonContentInfo(props: any) {
     return (
         <div className="grid-main-content-pokemon-info">
             <PokemonContentInfoBasic id={id} name={name} firstType={firstType} secondType={secondType} />
-            <PokemonContentInfoMetadata height={height} weight={weight} species={species} />
+            <PokemonContentInfoMetadata height={height} weight={weight} species={species} eggGroups={eggGroups} />
             <PokemonContentInfoAbilities firstAbility={firstAbility} secondAbility={secondAbility} thirdAbility={thirdAbility} />
             <div className="grid-centered-element grid-main-content-pokemon-info-description">{description}</div>
             <PokemonContentInfoStats health={health} attack={attack} defense={defense} specialAttack={specialAttack} specialDefense={specialDefense} speed={speed} />

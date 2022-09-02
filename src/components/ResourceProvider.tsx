@@ -2,11 +2,12 @@ import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useLocation } from "react-router-dom";
 
-import { ResourceFinder } from "../../components/ResourceFinder";
+import { ResourceFinder } from "./ResourceFinder";
+import { ResourceIdentificator } from "./ResourceIdentificator";
 
-import { APIResource } from "../../enums/api.enums";
+import { APIResource } from "../enums/api.enums";
 
-import { reqGetResource } from "../../store/resource/store.resource.thunk.actions";
+import { reqGetResource } from "../store/resource/store.resource.thunk.actions";
 
 export function ResourceProvider(props: any) {
     const { id } = props;
@@ -26,6 +27,7 @@ export function ResourceProvider(props: any) {
     return (
         <div className="grid-main">
             <ResourceFinder resourceName={resourceName} />
+            <ResourceIdentificator resourceName={resourceName} />
             {props.children}
         </div>
     );

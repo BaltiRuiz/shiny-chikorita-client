@@ -14,9 +14,21 @@
     border: 1px solid black;
 }
 
+.grid-start-element {
+    display: grid;
+    justify-content: start;
+    align-content: center;
+}
+
 .grid-centered-element {
     display: grid;
     justify-content: center;
+    align-content: center;
+}
+
+.grid-end-element {
+    display: grid;
+    justify-content: end;
     align-content: center;
 }
 
@@ -60,8 +72,8 @@
     display: grid;
     grid-area: main;
     grid-template-columns: 100%;
-    grid-template-rows: 10% 90%;
-    grid-template-areas: 'search' 'content';
+    grid-template-rows: 10% 10% 80%;
+    grid-template-areas: 'search' 'identificator' 'content';
 }
 
 .grid-main-search {
@@ -78,6 +90,26 @@
 
 .grid-main-search-button {
     grid-area: button;
+}
+
+.grid-main-identificator {
+    display: grid;
+    grid-area: identificator;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: 100%;
+    grid-template-areas: 'identificator-previous identificator-id-name identificator-next';
+}
+
+.grid-main-identificator-previous {
+    grid-area: identificator-previous;
+}
+
+.grid-main-identificator-id-name {
+    grid-area: identificator-id-name;
+}
+
+.grid-main-identificator-next {
+    grid-area: identificator-next;
 }
 
 .grid-footer {

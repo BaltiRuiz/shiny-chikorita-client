@@ -1,18 +1,6 @@
-.grid-main-content-types {
-    display: grid;
-    grid-area: content;
-    grid-template-columns: 100%;
-    grid-template-rows: 10% 90%;
-    grid-template-areas: 'types-title' 'types-info';
-}
-
-.grid-main-content-types-title {
-    grid-area: types-title;
-}
-
 .grid-main-content-types-info {
     display: grid;
-    grid-area: types-info;
+    grid-area: content;
     grid-template-columns: 60% 40%;
     grid-template-rows: 100%;
     grid-template-areas: 'types-info-damage-moves types-info-pokemon';

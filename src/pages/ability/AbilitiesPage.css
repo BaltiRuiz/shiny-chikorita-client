@@ -1,19 +1,7 @@
-.grid-main-content-abilities {
-    display: grid;
-    grid-area: content;
-    grid-template-columns: 100%;
-    grid-template-rows: 10% 90%;
-    grid-template-areas: 'abilities-title' 'abilities-info';
-}
-
-.grid-main-content-abilities-title {
-    grid-area: abilities-title;
-}
-
 .grid-main-content-abilities-info {
     display: grid;
-    grid-area: abilities-info;
-    grid-template-columns: 40% 60%;
+    grid-area: content;
+    grid-template-columns: 50% 50%;
     grid-template-rows: 100%;
     grid-template-areas: 'abilities-info-metadata abilities-info-pokemon';
 }

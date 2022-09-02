@@ -116,28 +116,15 @@ function AbilitiesContentInfoPokemon(props: any) {
     );
 }
 
-function AbilitiesContentInfo(props: any) {
-    const { info } = props;
-
-    return (
-        <div className="grid-main-content-abilities-info">
-            <AbilitiesContentInfoMetadata generation={info.generation} shortDescription={info.shortDescription} description={info.description} />
-            <AbilitiesContentInfoPokemon ability={info.name} pokemons={info.pokemons} />
-        </div>
-    );
-}
-
 export function AbilitiesPage(props: any) {
     const abilityData = useSelector((state: IStoreState) => state.resource.ability.data);
     const abilityMessage = useSelector((state: IStoreState) => state.resource.ability.message);
 
     if (abilityData) {
         return (
-            <div className="grid-main-content-abilities">
-                <div className="grid-centered-element grid-main-content-abilities-title">
-                    <h1>{abilityData.name.toUpperCase()}</h1>
-                </div>
-                <AbilitiesContentInfo info={abilityData} />
+            <div className="grid-main-content-abilities-info">
+                <AbilitiesContentInfoMetadata generation={abilityData.generation} shortDescription={abilityData.shortDescription} description={abilityData.description} />
+                <AbilitiesContentInfoPokemon ability={abilityData.name} pokemons={abilityData.pokemons} />
             </div>
         );
     } else {

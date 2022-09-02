@@ -16,7 +16,7 @@ import { NavigationBar } from "./components/NavigationBar";
 import { Footer } from "./components/Footer";
 import { Navigator } from "./components/Navigator";
 
-import { ResourceProvider } from "./pages/resource/ResourceProvider";
+import { ResourceProvider } from "./components/ResourceProvider";
 import { PokemonPage } from "./pages/pokemon/PokemonPage";
 import { TypesPage } from "./pages/type/TypesPage";
 import { MovesPage } from "./pages/move/MovesPage";

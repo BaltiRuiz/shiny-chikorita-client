@@ -123,31 +123,18 @@ function TypesContentInfoPokemon(props: any) {
     );
 }
 
-function TypesContentInfo(props: any) {
-    const { info } = props;
-
-    return (
-        <div className="grid-main-content-types-info">
-            <div className="grid-main-content-types-info-damage-moves">
-                <TypesContentInfoDamage type={info.name} damageRelations={info.damageRelations} />
-                <TypesContentInfoMoves type={info.name} moves={info.moves} />
-            </div>
-            <TypesContentInfoPokemon type={info.name} pokemons={info.pokemons} />
-        </div>
-    );
-}
-
 export function TypesPage() {
     const typeData = useSelector((state: IStoreState) => state.resource.type.data);
     const typeMessage = useSelector((state: IStoreState) => state.resource.type.message);
 
     if (typeData) {
         return (
-            <div className="grid-main-content-types">
-                <div className="grid-centered-element grid-main-content-types-title" style={{ color: mapPokemonTypeToColor(typeData.name) }}>
-                    <h1>{typeData.name.toUpperCase()}</h1>
+            <div className="grid-main-content-types-info">
+                <div className="grid-main-content-types-info-damage-moves">
+                    <TypesContentInfoDamage type={typeData.name} damageRelations={typeData.damageRelations} />
+                    <TypesContentInfoMoves type={typeData.name} moves={typeData.moves} />
                 </div>
-                <TypesContentInfo info={typeData} />
+                <TypesContentInfoPokemon type={typeData.name} pokemons={typeData.pokemons} />
             </div>
         );
     } else {

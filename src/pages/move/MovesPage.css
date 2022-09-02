@@ -1,18 +1,6 @@
-.grid-main-content-moves {
-    display: grid;
-    grid-area: content;
-    grid-template-columns: 100%;
-    grid-template-rows: 10% 90%;
-    grid-template-areas: 'moves-title' 'moves-info';
-}
-
-.grid-main-content-moves-title {
-    grid-area: moves-title;
-}
-
 .grid-main-content-moves-info {
     display: grid;
-    grid-area: moves-info;
+    grid-area: content;
     grid-template-columns: 60% 40%;
     grid-template-rows: 100%;
     grid-template-areas: 'moves-info-metadata moves-info-pokemon';

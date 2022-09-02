@@ -121,41 +121,28 @@ function MovesContentInfoMetadata(props: any) {
     );
 }
 
-function MovesContentInfo(props: any) {
-    const { info } = props;
-
-    return (
-        <div className="grid-main-content-moves-info">
-            <MovesContentInfoMetadata
-                generation={info.generation}
-                type={info.type}
-                category={info.category}
-                power={info.power}
-                pp={info.pp}
-                accuracy={info.accuracy}
-                contestType={info.contestType}
-                target={info.target}
-                effectDescription={info.effectDescription}
-                description={info.description}
-            />
-            <MovesContentInfoPokemon move={info.name} pokemons={info.pokemons} />
-        </div>
-    );
-}
-
 export function MovesPage(props: any) {
     const moveData = useSelector((state: IStoreState) => state.resource.move.data);
     const moveMessage = useSelector((state: IStoreState) => state.resource.move.message);
 
     if (moveData) {
         return (
-            <div className="grid-main-content-moves">
-                <div className="grid-centered-element grid-main-content-moves-title" style={{ color: mapPokemonTypeToColor(moveData.type) }}>
-                    <h1>{moveData.name.toUpperCase()}</h1>
-                </div>
-                <MovesContentInfo info={moveData} />
+            <div className="grid-main-content-moves-info">
+                <MovesContentInfoMetadata
+                    generation={moveData.generation}
+                    type={moveData.type}
+                    category={moveData.category}
+                    power={moveData.power}
+                    pp={moveData.pp}
+                    accuracy={moveData.accuracy}
+                    contestType={moveData.contestType}
+                    target={moveData.target}
+                    effectDescription={moveData.effectDescription}
+                    description={moveData.description}
+                />
+                <MovesContentInfoPokemon move={moveData.name} pokemons={moveData.pokemons} />
             </div>
-        )
+        );
     } else {
         return <p>{moveMessage}</p>
     }
