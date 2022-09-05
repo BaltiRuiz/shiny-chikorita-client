@@ -4,14 +4,14 @@ import { useNavigate } from "react-router-dom";
 import { useAPIStateFetching } from "../App";
 
 export function ResourceFinder(props: any) {
-    const { resourceName } = props;
+    const { resourceType } = props;
 
     const [id, setID] = useState("");
 
     const navigate = useNavigate();
 
     const handleFindButtonClick = () => {
-        navigate(`/${resourceName}/${id}`);
+        navigate(`/${resourceType}/${id}`);
     }
 
     const isAPIFetching = useAPIStateFetching();
@@ -33,7 +33,7 @@ export function ResourceFinder(props: any) {
                     disabled={isAPIFetching}
                     onClick={handleFindButtonClick}
                 >
-                    {`Find ${resourceName.toUpperCase()}`}
+                    {`Find ${resourceType.toUpperCase()}`}
                 </button>
             </div>
         </div>

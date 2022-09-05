@@ -38,9 +38,9 @@ export const resourceReducer = (state: any = initialState, action: IStoreAction)
 
     switch (action.type) {
         case storeEnums.SetResourceData:
-            newState[actionPayload.resourceName].data = actionPayload.data;
+            newState[actionPayload.resourceType].data = actionPayload.data;
         case storeEnums.SetResourceMessage:
-            newState[actionPayload.resourceName].message = actionPayload.message;
+            newState[actionPayload.resourceType].message = actionPayload.message;
         default:
             return newState;
     }

@@ -3,16 +3,16 @@ import { APIResource } from "../../enums/api.enums";
 
 import { IStoreAction } from "../store.interfaces";
 
-export const setResourceData = (resourceName: APIResource, data: any): IStoreAction => {
+export const setResourceData = (resourceType: APIResource, data: any): IStoreAction => {
     return {
-        payload: { resourceName, data },
+        payload: { resourceType, data },
         type: storeEnums.SetResourceData,
     }
 }
 
-export const setResourceMessage = (resourceName: APIResource, message: string | null): IStoreAction => {
+export const setResourceMessage = (resourceType: APIResource, message: string | null): IStoreAction => {
     return {
-        payload: { resourceName, message },
+        payload: { resourceType, message },
         type: storeEnums.SetResourceMessage,
     }
 }

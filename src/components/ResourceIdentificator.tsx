@@ -7,15 +7,15 @@ import { useAPIStateFetching } from "../App";
 import { IStoreState } from "../store/store.interfaces";
 
 export function ResourceIdentificator(props: any) {
-    const { resourceName } = props;
+    const { resourceType } = props;
 
     const navigate = useNavigate();
 
     const handlePreviousNextButtonClick = (newID: number) => {
-        navigate(`/${resourceName}/${newID}`);
+        navigate(`/${resourceType}/${newID}`);
     }
 
-    const resourceData = useSelector((state: IStoreState) => state.resource[resourceName].data);
+    const resourceData = useSelector((state: IStoreState) => state.resource[resourceType].data);
 
     const isAPIFetching = useAPIStateFetching();
 

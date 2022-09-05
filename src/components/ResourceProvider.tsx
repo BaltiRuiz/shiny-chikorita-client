@@ -14,20 +14,20 @@ export function ResourceProvider(props: any) {
 
     const { pathname } = useLocation();
 
-    const resourceName = pathname.split("/")[1];
+    const resourceType = pathname.split("/")[1];
 
     const dispatch = useDispatch<any>();
 
     useEffect(() => {
         if (id !== undefined) {
-            dispatch(reqGetResource(resourceName as APIResource, id));
+            dispatch(reqGetResource(resourceType as APIResource, id));
         }
     }, [id]);
 
     return (
         <div className="grid-main">
-            <ResourceFinder resourceName={resourceName} />
-            <ResourceIdentificator resourceName={resourceName} />
+            <ResourceFinder resourceType={resourceType} />
+            <ResourceIdentificator resourceType={resourceType} />
             {props.children}
         </div>
     );

@@ -8,17 +8,17 @@ import { setResourceData, setResourceMessage } from "./store.resource.actions";
 
 import { APIState, APIResource } from "../../enums/api.enums";
 
-export const reqGetResource = (resourceName: APIResource, id: string): APPThunkAction => async (dispatch: APPThunkDispatch) => {
+export const reqGetResource = (resourceType: APIResource, id: string): APPThunkAction => async (dispatch: APPThunkDispatch) => {
     try {
         dispatch(setAPIState(APIState.Fetching));
 
-        const resource = await fetchResource(resourceName, id);
+        const resource = await fetchResource(resourceType, id);
 
-        dispatch(setResourceData(resourceName, resource.data));
-        dispatch(setResourceMessage(resourceName, resource.message));
+        dispatch(setResourceData(resourceType, resource.data));
+        dispatch(setResourceMessage(resourceType, resource.message));
     } catch (error) {
-        dispatch(setResourceData(resourceName, null));
-        dispatch(setResourceMessage(resourceName, error.response.data.message));
+        dispatch(setResourceData(resourceType, null));
+        dispatch(setResourceMessage(resourceType, error.response.data.message));
     } finally {
         dispatch(setAPIState(APIState.Fetched));
     }
